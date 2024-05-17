@@ -13,13 +13,13 @@ import ThemeButton from "./component/ThemeButton";
 const App = () => {
   return (
     <div className="main-content">
-       <Controls />
       <Routes>
         <Route path="/" element={<Header />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Controls />
 
       {/* <Routes>
         </Routes> */}

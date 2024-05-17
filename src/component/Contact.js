@@ -131,7 +131,9 @@ const ContactItem = ({ icon, title, info }) => {
         <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
         <span>{title}</span>
       </div>
-      <p>: {info}</p>
+      <div>
+        <p>: {info}</p>
+      </div>
     </div>
   );
 };

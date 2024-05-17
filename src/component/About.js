@@ -33,18 +33,6 @@ function About() {
               remains innovative and future-proof. Let's collaborate to bring
               your digital vision to life!
             </p>
-            <div className="btn-con">
-              <a
-                href="https://drive.google.com/file/d/1Usq9DVtMEasAPKWnKOWQguxqpmHQj7YR/view?usp=sharing"
-                className="main-btn"
-                target="_blank"
-              >
-                <span className="btn-text">Download CV</span>
-                <span className="btn-icon">
-                  <FontAwesomeIcon icon={faDownload} />
-                </span>
-              </a>
-            </div>
           </div>
           <div className="right-about">
             <div className="about-item">
@@ -67,7 +55,7 @@ function About() {
             </div>
             <div className="about-item">
               <div className="abt-text">
-                <p className="large-text">150+</p>
+                <p className="large-text">100+</p>
                 <p className="small-text">
                   DSA questions <br />
                   Solved
