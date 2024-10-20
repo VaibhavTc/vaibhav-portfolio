@@ -90,7 +90,7 @@ const Contact = () => {
               <ContactItem
                 icon={(faS, faUserGraduate)}
                 title="Education"
-                info="IIT Kharagpur"
+                info="Indian Institute of Technology Kharagpur"
               />
               <ContactItem
                 icon={faGlobeAfrica}
