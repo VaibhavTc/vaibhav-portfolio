@@ -37,7 +37,7 @@ function About() {
           <div className="right-about">
             <div className="about-item">
               <div className="abt-text">
-                <p className="large-text">10+</p>
+                <p className="large-text">15+</p>
                 <p className="small-text">
                   Projects <br />
                   Completed
@@ -46,7 +46,7 @@ function About() {
             </div>
             <div className="about-item">
               <div className="abt-text">
-                <p className="large-text">3+</p>
+                <p className="large-text">4+</p>
                 <p className="small-text">
                   Years of <br />
                   experience
@@ -55,7 +55,7 @@ function About() {
             </div>
             <div className="about-item">
               <div className="abt-text">
-                <p className="large-text">100+</p>
+                <p className="large-text">400+</p>
                 <p className="small-text">
                   DSA questions <br />
                   Solved

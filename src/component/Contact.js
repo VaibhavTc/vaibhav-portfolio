@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import {
@@ -11,12 +11,52 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
-  faGithub,
+  faTwitter,
   faInstagram,
   faLinkedin,
-  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import emailjs from "emailjs-com";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState(null); // State to track form submission status
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const serviceId = "service_txr476r";
+    const templateId = "template_0zz5veh";
+    const userId = "-HRL03MKR-SeeO4ZJ";
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    setStatus("pending");
+
+    emailjs
+      .send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      })
+      .catch((error) => {
+        setStatus("error");
+      });
+  };
+
   return (
     <section className="section sec4 contact active" id="contact">
       <div className="contact-container">
@@ -25,13 +65,14 @@ const Contact = () => {
             Contact <span>Me</span>
           </h2>
         </div>
+
         <div className="contact-content-con">
           <div className="left-contact">
             <h4>Contact me here</h4>
             <p>
               Want to work together, get in touch or shoot me an email directly
               on{" "}
-              <a href="mailto:ritikbehera109@gmail.com">
+              <a href="mailto:vaibhavchakole79@gmail.com">
                 vaibhavchakole79@gmail.com
               </a>
             </p>
@@ -90,19 +131,43 @@ const Contact = () => {
               </div>
             </div>
           </div>
+
           <div className="right-contact">
-            <form action="" className="contact-form">
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="input-control i-c-2">
-                <input type="text" required placeholder="Your Name" />
-                <input type="email" required placeholder="Your Email" />
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your Name"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your Email"
+                />
               </div>
               <div className="input-control">
-                <input type="text" required placeholder="Subject" />
+                <input
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  placeholder="Subject"
+                />
               </div>
               <div className="input-control">
                 <textarea
-                  name=""
-                  id=""
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   cols="15"
                   rows="8"
                   placeholder="Message Here..."
@@ -117,6 +182,17 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            {status === "success" && (
+              <p className="success-message">Email sent successfully!</p>
+            )}
+            {status === "error" && (
+              <p className="error-message">
+                Failed to send email. Please try again later.
+              </p>
+            )}
+            {status === "pending" && (
+              <p className="pending-message">Sending email...</p>
+            )}
           </div>
         </div>
       </div>
