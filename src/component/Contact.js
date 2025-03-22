@@ -208,7 +208,7 @@ const ContactItem = ({ icon, title, info }) => {
         <span>{title}</span>
       </div>
       <div>
-        <p>: {info}</p>
+        <p>{info}</p>
       </div>
     </div>
   );

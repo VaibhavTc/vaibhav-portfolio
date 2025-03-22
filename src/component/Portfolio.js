@@ -4,7 +4,11 @@ import { faBrands } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { faCode, faLink } from "@fortawesome/free-solid-svg-icons";
 
-import port1 from "../assets/port1.jpg";
+import port2 from "../assets/port2.jpg";
+import resume from "../assets/build-a-resume.svg";
+import eccom from "../assets/ecommerce-website-builder-india.png";
+import connect from "../assets/connect.jpg";
+import cassette from "../assets/cassette.jpg";
 function PortfolioSection() {
   return (
     <section className="section sec3 portfolio active" id="portfolio">
@@ -19,7 +23,7 @@ function PortfolioSection() {
       <div className="portfolios">
         <div className="portfolio-item">
           <div className="image">
-            <img src={port1} alt="" />
+            <img src={resume} alt="" />
           </div>
           <div className="hover-items">
             <h3>AI Resume Builder</h3>
@@ -43,7 +47,7 @@ function PortfolioSection() {
         </div>
         <div className="portfolio-item">
           <div className="image">
-            <img src={port1} alt="" />
+            <img src={eccom} alt="" />
           </div>
           <div className="hover-items">
             <h3>E-commerce Website</h3>
@@ -67,7 +71,7 @@ function PortfolioSection() {
         </div>
         <div className="portfolio-item">
           <div className="image">
-            <img src={port1} alt="" />
+            <img src={connect} alt="" />
           </div>
           <div className="hover-items">
             <h3>Connectverse</h3>
@@ -91,7 +95,7 @@ function PortfolioSection() {
         </div>
         <div className="portfolio-item">
           <div className="image">
-            <img src={port1} alt="" />
+            <img src={cassette} alt="" />
           </div>
           <div className="hover-items">
             <h3>Spotify Playlist Sorter</h3>
@@ -115,7 +119,7 @@ function PortfolioSection() {
         </div>
         <div className="portfolio-item">
           <div className="image">
-            <img src={port1} alt="" />
+            <img src={port2} alt="" />
           </div>
           <div className="hover-items">
             <h3>Photo Gallary</h3>
