@@ -55,7 +55,7 @@ function About() {
             </div>
             <div className="about-item">
               <div className="abt-text">
-                <p className="large-text">400+</p>
+                <p className="large-text">1000+</p>
                 <p className="small-text">
                   DSA questions <br />
                   Solved
